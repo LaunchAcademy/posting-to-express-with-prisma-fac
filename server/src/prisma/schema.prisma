@@ -6,3 +6,11 @@ datasource db {
   provider = "postgresql"
   url      = "postgres://postgres:postgres@localhost:5432/hobbies_development"
 }
+
+model Hobby {
+  id            Int         @id @default(autoincrement())
+  name          String      @db.VarChar(255)
+  description   String?     @db.Text
+  createdAt     DateTime    @default(now()) @db.Timestamp(6)
+  updatedAt     DateTime    @default(now()) @db.Timestamp(6)
+}
