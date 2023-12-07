@@ -1,4 +1,4 @@
-# Posting to Express with Objection
+# Posting to Express with Prisma
 
 Let's build an application with a database to track our hobbies. The frontend React is provided so that we can focus on the backend Express.
 
