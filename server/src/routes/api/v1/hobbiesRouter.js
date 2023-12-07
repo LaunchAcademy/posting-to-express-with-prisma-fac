@@ -14,9 +14,9 @@ hobbiesRouter.get("/", async (req, res) => {
 });
 
 hobbiesRouter.post("/", async (req, res) => {
+  const hobbyData = req.body;
   try {
-    const body = req.body;
-    const newHobby = await prisma.hobby.create({ data: body });
+    const newHobby = await prisma.hobby.create({ data: hobbyData });
     return res.status(201).json({ hobby: newHobby });
   } catch (err) {
     console.log(err);
